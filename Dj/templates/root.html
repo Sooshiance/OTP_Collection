@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-grid.min.css' %}">
+    <title> {% block title %}{% endblock title %} </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'HOME' %}" aria-current="page">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    {% if request.user.is_authenticated %}
+                        <a class="nav-link" href="{% url 'LOGOUT' %}">logout</a>
+                    {% else %}
+                        <a class="nav-link" href="{% url 'LOGIN' %}">login</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    {% block doc %}
+    
+    {% endblock doc %}
+
+    <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'root.html' %}
+
+{% block title %}
+OTP Validation
+{% endblock title %}
+
+{% block doc %}
+<form action="{% url 'OTP-LOGIN-VERIFY' %}" method="post">
+    <label for="number">
+        OTP 
+    </label>
+    <input type="number" name="otp" class="form-control my-5">
+    {% csrf_token %}
+    <input type="submit" value="submit">
+</form>
+{% endblock doc %}

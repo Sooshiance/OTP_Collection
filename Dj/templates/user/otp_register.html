@@ -1,0 +1,22 @@
+{% extends 'root.html' %}
+
+{% block title %}
+OTP Register
+{% endblock title %}
+
+{% block doc %}
+<h1>
+    OTP Register 
+</h1>
+
+<form action="{% url 'OTP-REGISTER-VERIFY' %}" method="post">
+    <label for="number">
+        OTP
+    </label>
+    <input type="number" name="otp" class="form-control my-5">
+    <br>
+    {% csrf_token %}
+    <br>
+    <input type="submit" value="submit">
+</form>
+{% endblock doc %}
