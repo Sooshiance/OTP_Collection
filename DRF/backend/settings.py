@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
+
+    # TODO: Local app
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
@@ -132,6 +135,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# TODO: Change the default User model
+AUTH_USER_MODEL = "user.User"
 
 
 # TODO : Rest framework configuration
