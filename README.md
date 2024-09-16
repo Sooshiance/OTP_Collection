@@ -2,6 +2,8 @@
 
 The collection of OTPs in both Django and Django rest framework.
 
+I will implement the **`Services, Repositories`** design pattern for this project.
+
 ## Django
 
 This app contains 2-factor-AUTH for Users, OTP-account-verification and OTP-reset-password.
@@ -65,3 +67,6 @@ If you wanna find OTP-Reset-Password, search in views.py for this comment :
 #### change the `interval` in the `utils.py` as you please
 
 ## DRF
+
+In **`DRF`**, since we will work with **`JWT`** and we don't need `is_active` status,
+I will remove needing to password, instead I will use **`get_or_create`** function for it.
