@@ -20,15 +20,21 @@ I provide you some resources that could help you in this :
 
                     https://www.twilio.com/en-us/blog/enable-multiple-otp-methods-django
 
+
                     https://www.youtube.com/watch?v=UKTqfhbb9gM
+
 
                     https://www.twilio.com/docs/api/rest/sending-messages
 
+
                     https://stackoverflow.com/questions/26718151/one-time-user-authentication-with-sms-using-django-and-twilio
+
 
                     https://medium.com/@EphraimBuddy/building-a-real-world-phone-verification-api-endpoints-with-django-rest-framework-839c5e8ffb0b
 
+
                     https://studygyaan.com/django/login-with-otp-via-email-phone-in-django-rest-framework
+
 
 I hope these links be useful to you :)
 
