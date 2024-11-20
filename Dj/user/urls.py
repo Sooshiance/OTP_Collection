@@ -14,7 +14,7 @@ urlpatterns = [
     path('register/', registerUser, name='REGISTER'),
     path('otp-register-valid/', otpRegisterValidation, name='OTP-REGISTER-VERIFY'),
     
-    path('reset-password/', otpPassworReset, name='FORGET'),
+    path('reset-password/', otpPasswordReset, name='FORGET'),
     path('otp-password-reset/', checkOTP, name='RESET'),
-    path('confirm-password/', confirmResetPassowrd, name='CONFIRM'),
+    path('confirm-password/', confirmResetPassword, name='CONFIRM'),
 ]

@@ -4,9 +4,9 @@ from django.utils.timezone import datetime
 
 import pyotp
 
-from .models import *
-from .forms import *
-from .utils import *
+from .models import User, Profile
+from .forms import UserRegister, LoginForm, OTPForm
+from .utils import sendToken
 
 
 ############################### TODO : Authentication ###############################
@@ -94,7 +94,7 @@ def logoutUser(request):
     return redirect('HOME')
 
 
-################################### TODO : Registeration ###################################
+################################### TODO : Registration ###################################
 
 
 def registerUser(request):
@@ -174,7 +174,7 @@ def otpRegisterValidation(request):
 ####################### TODO : Reset_Password #######################
 
 
-def otpPassworReset(request):
+def otpPasswordReset(request):
     if request.method == "POST":
         phone = request.POST.get("phone")
         if User.objects.filter(phone__exact=phone):
@@ -225,7 +225,7 @@ def checkOTP(request):
     return render(request, "user/otp_reset_password.html", {"form":form})
 
 
-def confirmResetPassowrd(request):
+def confirmResetPassword(request):
     if request.user.is_authenticated:
         messages.warning(request, 'شما نمیتوانید به این صفحه مراجعه کنید')
         return redirect('HOME')
